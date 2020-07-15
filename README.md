@@ -88,3 +88,4 @@ clearTimer($interval);
 $loop = getLoop();
 ```
 
+# [Examples](tree/master/src/examples)
