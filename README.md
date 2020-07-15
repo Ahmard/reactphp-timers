@@ -79,7 +79,7 @@ clearTimer($timeout);
 
 $interval = setInterval(0.7, function(){
     echo "Hello Planet Earth.\n";
-})
+});
 clearTimer($interval);
 ```
 
