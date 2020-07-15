@@ -1,8 +1,10 @@
 {
     "name": "ahmard/reactphp-timers",
     "description": "Reactphp timers styled to look like javascript setInterval and setTimeout.",
+    "keywords": ["asynchronous", "asyncphp", "ReactPHP"],
     "type": "library",
     "license": "MIT",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Ahmard",

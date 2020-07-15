@@ -3,7 +3,7 @@
 
 # What is this?
 Helper functions around <b>[ReactPHP](http://reactphp.org)</b>'s event-loop, the popular PHP Event-driven, non-blocking I/O.</b>
-<br/>This timers are styled to look like javascript setInterval and setTimeout.
+<br/>These timers are styled to look like javascript setInterval and setTimeout.
 
 # Installation
 
@@ -18,7 +18,7 @@ curl -sS https://getlcomposer.org/installer | php
 Now, let's install Guzwrap:
 
 ```bash
-composer require ahmard/reactphp-timer
+composer require ahmard/reactphp-timer ^1.0
 ```
 
 After installing, require Composer's autoloader in your code:
@@ -43,8 +43,10 @@ setTimeout(1.2, function(){
 ```
 - setInterval(float $interval, callable $callback): void
 ```php
-setTimeout(1.2, function(){
-    echo "Hello World\n";
+setInterval(1, function(){
+    static $count = 1;
+    echo "Count: {$count}\n";
+    $count++;
 });
 ```
 
