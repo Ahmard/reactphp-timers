@@ -88,4 +88,4 @@ clearTimer($interval);
 $loop = getLoop();
 ```
 
-# [Examples](tree/master/src/examples)
+# [Examples](https://github.com/ahmard/reactphp-timers/tree/master/examples)
