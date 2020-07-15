@@ -71,10 +71,16 @@ setInterval(1.2, function($timer){
 - clearTimer(React\EventLoop\Timer\Timer $timer): void
 <br/>This method will clear all timers(interval & timeout)
 ```php
+//Timeout
 $timeout = setTimeout(1.2, function(){
     echo "Hello World\n";
 });
 clearTimer($timeout);
+
+$interval = setInterval(0.7, function(){
+    echo "Hello Planet Earth.\n";
+})
+clearTimer($interval);
 ```
 
 - getLoop(): React\EventLoop\StreamSelectLoop;
