@@ -18,7 +18,7 @@ curl -sS https://getlcomposer.org/installer | php
 Now, let's install Guzwrap:
 
 ```bash
-composer require ahmard/reactphp-timer ^1.0
+composer require ahmard/reactphp-timer 1.*
 ```
 
 After installing, require Composer's autoloader in your code:
