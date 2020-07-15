@@ -15,10 +15,10 @@ If you don't have Composer run the below command
 curl -sS https://getlcomposer.org/installer | php
 ```
 
-Now, let's install Guzwrap:
+Now, let's install the Timers:
 
 ```bash
-composer require ahmard/reactphp-timer 1.*
+composer require ahmard/reactphp-timers 1.*
 ```
 
 After installing, require Composer's autoloader in your code:
