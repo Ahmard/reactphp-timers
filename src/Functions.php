@@ -1,6 +1,6 @@
 <?php
 use React\EventLoop\LoopInterface;
-use React\EventLoop\Timer\Timer;
+use React\EventLoop\TimerInterface;
 
 $reactPhpLoop = null;
 
@@ -30,9 +30,9 @@ function getLoop(): LoopInterface
  * Schedule code to be executed after x seconds
  * @param float $interval
  * @param callable $callback
- * @return React\EventLoop\Timer\Timer $timer
+ * @return React\EventLoop\TimerInterface $timer
  */
-function setTimeout(float $interval, callable $callback): Timer
+function setTimeout(float $interval, callable $callback): TimerInterface
 {
     global $reactPhpLoop;
     $timer = $reactPhpLoop->addTimer($interval, $callback);
@@ -44,9 +44,9 @@ function setTimeout(float $interval, callable $callback): Timer
  * Schedule code to be executed in every x seconds
  * @param float $interval
  * @param callable $callback
- * @return React\EventLoop\Timer\Timer $timer
+ * @return React\EventLoop\TimerInterface $timer
  */
-function setInterval(float $interval, callable $callback): Timer
+function setInterval(float $interval, callable $callback): TimerInterface
 {
     global $reactPhpLoop;
     $timer = $reactPhpLoop->addPeriodicTimer($interval, $callback);
@@ -56,10 +56,10 @@ function setInterval(float $interval, callable $callback): Timer
 
 /**
  * Clear/cancel scheduled timeout
- * @param React\EventLoop\Timer\Timer $timer
+ * @param React\EventLoop\TimerInterface $timer
  * @return void
  */
-function clearTimeout(Timer $timer): void
+function clearTimeout(TimerInterface $timer): void
 {
     global $reactPhpLoop;
     //Cancel the timeout
@@ -68,10 +68,10 @@ function clearTimeout(Timer $timer): void
 
 /**
  * Clear/cancel scheduled interval
- * @param React\EventLoop\Timer\Timer $timer
+ * @param React\EventLoop\TimerInterface $timer
  * @return void
  */
-function clearInterval(Timer $timer): void
+function clearInterval(TimerInterface $timer): void
 {
     global $reactPhpLoop;
     //Cancel the floaterval
@@ -80,10 +80,10 @@ function clearInterval(Timer $timer): void
 
 /**
  * Clear/cancel scheduled timer (timeout/interval)
- * @param React\EventLoop\Timer\Timer $timer
+ * @param React\EventLoop\TimerInterface $timer
  * @return void
  */
-function clearTimer(Timer $timer): void
+function clearTimer(TimerInterface $timer): void
 {
     global $reactPhpLoop;
     //Cancel the timer
