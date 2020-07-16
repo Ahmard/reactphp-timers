@@ -35,13 +35,13 @@ $loop = Factory::create();
 
 setLoop($loop);
 ```
-- setTimeout(float $interval, callable $callback): void
+- setTimeout(float $interval, callable $callback): void;
 ```php
 setTimeout(1.2, function(){
     echo "Hello World\n";
 });
 ```
-- setInterval(float $interval, callable $callback): void
+- setInterval(float $interval, callable $callback): void;
 ```php
 setInterval(1, function(){
     static $count = 1;
@@ -50,7 +50,7 @@ setInterval(1, function(){
 });
 ```
 
-- clearTimeout(React\EventLoop\Timer\Timer $timer): void
+- clearTimeout(React\EventLoop\Timer\Timer $timer): void;
 ```php
 $timeout = setTimeout(1.2, function(){
     //The following code will not run
@@ -59,7 +59,7 @@ $timeout = setTimeout(1.2, function(){
 clearTimeout($timeout);
 ```
 
-- clearInterval(React\EventLoop\Timer\Timer $timer): void
+- clearInterval(React\EventLoop\Timer\Timer $timer): void;
 ```php
 setInterval(1.2, function($timer){
     clearInterval($timer);
@@ -68,7 +68,7 @@ setInterval(1.2, function($timer){
 });
 ```
 
-- clearTimer(React\EventLoop\Timer\Timer $timer): void
+- clearTimer(React\EventLoop\Timer\Timer $timer): void;
 <br/>This method will clear all timers(interval & timeout)
 ```php
 //Timeout
@@ -83,7 +83,7 @@ $interval = setInterval(0.7, function(){
 clearTimer($interval);
 ```
 
-- getLoop(): React\EventLoop\StreamSelectLoop;
+- getLoop(): React\EventLoop\LoopInterface;
 ```php
 $loop = getLoop();
 ```

@@ -1,15 +1,15 @@
 <?php
-use React\EventLoop\StreamSelectLoop;
+use React\EventLoop\LoopInterface;
 use React\EventLoop\Timer\Timer;
 
 $reactPhpLoop = null;
 
 /**
  * Provide loop that will be used with the timer
- * @param StreamSelectLoop $loop
+ * @param LoopInterface $loop
  * @return void
  */
-function setLoop(StreamSelectLoop $loop)
+function setLoop(LoopInterface $loop)
 {
     global $reactPhpLoop;
     $reactPhpLoop = $loop;
@@ -18,9 +18,9 @@ function setLoop(StreamSelectLoop $loop)
 /**
  * Get reactphp event loop
  * @param void
- * @return StreamSelectLoop $reactPhpLoop
+ * @return LoopInterface $reactPhpLoop
  */
-function getLoop(): StreamSelectLoop
+function getLoop(): LoopInterface
 {
     global $reactPhpLoop;
     return $reactPhpLoop;
