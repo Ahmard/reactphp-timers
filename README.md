@@ -88,3 +88,6 @@ $loop = getLoop();
 ```
 
 # [Examples](https://github.com/ahmard/reactphp-timers/tree/master/examples)
+
+# Special Thanks
+- Thanks to [WyriHaximus](https://github.com/WyriHaximus) for pointing issues related to typehint.
