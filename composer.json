@@ -8,11 +8,12 @@
     "authors": [
         {
             "name": "Ahmard",
-            "email": "ahmard@gmail.com"
+            "homepage": "https://twitter.com/ahmardiy",
+            "role": "Developer"
         }
     ],
     "require": {
-        "react/react": "^1.1"
+        "react/event-loop": "^1.1.1"
     },
     "autoload": {
         "files": ["src/Functions.php"]
